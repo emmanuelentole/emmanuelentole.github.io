@@ -1,0 +1,221 @@
+
+/* ---------------------------------
+   Emmanuel Entole — Portfolio
+   --------------------------------- */
+
+:root {
+  --navy: #142b45;
+  --blue: #315b80;
+  --background: #f8f9fb;
+  --white: #ffffff;
+  --text: #263445;
+  --muted: #687789;
+  --line: #e3e8ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Navigation */
+
+header {
+  width: 100%;
+  padding: 24px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  color: var(--navy);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -2px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+/* Main content */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 35px;
+}
+
+section {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+/* Hero section */
+
+.hero {
+  padding-top: 125px;
+  padding-bottom: 130px;
+}
+
+.hero h1 {
+  color: var(--navy);
+  font-size: clamp(3.8rem, 9vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: -5px;
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero h2 {
+  font-size: 1.45rem;
+  color: var(--navy);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.hero > p:not(.eyebrow) {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--blue);
+}
+
+/* About and profile sections */
+
+section h2 {
+  color: var(--navy);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+}
+
+section p:not(.eyebrow) {
+  max-width: 750px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.details strong {
+  color: var(--navy);
+}
+
+/* Contact */
+
+.contact a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+  header {
+    padding: 20px 6%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+  }
+
+  main {
+    padding: 0 22px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .hero {
+    padding-top: 85px;
+    padding-bottom: 90px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+}
